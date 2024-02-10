@@ -6,7 +6,7 @@
 
 Json_File& Json_File::write(Model* model,QString name){
     QJsonArray sensors;
-    for (int i=0;i<model->Get_Numero_Sensori();i++){
+    for (unsigned int i=0;i<model->Get_Numero_Sensori();i++){
         Visitor_Json visitor;
         (model->Get_Sensore(i))->Accept(&visitor);
         sensors.push_back(visitor.Get_Obj());

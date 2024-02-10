@@ -137,7 +137,7 @@ public:
         if(i<dimensione){
             Nodo* temp=first;
             bool esci=false;
-            for (int j=0; j<dimensione && !esci; ++j) {
+            for (unsigned int j=0; j<dimensione && !esci; ++j) {
                 if (j==i){
                     esci=true;
                 }else{

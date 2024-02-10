@@ -7,7 +7,7 @@
 #include<QFormLayout>
 #include<QMessageBox>
 
-QHBoxLayout* View_Choice_Details_New_Sensor::Layout_Top(Sensore* s){
+QHBoxLayout* View_Choice_Details_New_Sensor::Layout_Top(){
 
     QVBoxLayout* general_info=new QVBoxLayout;
     general_info->addWidget(nome);
@@ -21,7 +21,7 @@ QHBoxLayout* View_Choice_Details_New_Sensor::Layout_Top(Sensore* s){
 
     return top;
 }
-View_Choice_Details_New_Sensor::View_Choice_Details_New_Sensor(Sensore* s, QWidget* p):snsr(s),QWidget(p) {
+View_Choice_Details_New_Sensor::View_Choice_Details_New_Sensor(Sensore* s, QWidget* p):QWidget(p),snsr(s) {
     if(s!=nullptr){
 
         this->setAttribute(Qt::WA_QuitOnClose,false);
@@ -41,7 +41,7 @@ View_Choice_Details_New_Sensor::View_Choice_Details_New_Sensor(Sensore* s, QWidg
         if(dynamic_cast<Sensore_Profondità*>(snsr)){
             type=new QLabel("TIPO :  SENSORE_DI_PROFONDITA'");
 
-            QHBoxLayout* top=Layout_Top(s);
+            QHBoxLayout* top=Layout_Top();
 
             QLabel* zone=new QLabel("ZONA:");
             zone->setAlignment(Qt::AlignCenter | Qt::AlignTop);
@@ -94,7 +94,7 @@ View_Choice_Details_New_Sensor::View_Choice_Details_New_Sensor(Sensore* s, QWidg
 
             type=new QLabel("TIPO :  SENSORE_INQUINAMENTO");
 
-            QHBoxLayout* top=Layout_Top(snsr);
+            QHBoxLayout* top=Layout_Top();
 
             QLabel* pm_2_5=new QLabel("QUANTITA' PM_2,5 REGISTATA: ");
             pm_2_5->setAlignment(Qt::AlignCenter | Qt::AlignTop);
@@ -131,7 +131,7 @@ View_Choice_Details_New_Sensor::View_Choice_Details_New_Sensor(Sensore* s, QWidg
 
             type=new QLabel("TIPO :  SENSORE_DI_TEMPERATURA");
 
-            QHBoxLayout* top=Layout_Top(snsr);
+            QHBoxLayout* top=Layout_Top();
 
             QLabel* min_temp=new QLabel("MIN  TEMPERATURA  REGISTRABILE:");
             min_temp->setAlignment(Qt::AlignCenter | Qt::AlignTop);
@@ -175,7 +175,7 @@ View_Choice_Details_New_Sensor::View_Choice_Details_New_Sensor(Sensore* s, QWidg
 
             type=new QLabel("TIPO :  SENSORE_PH");
 
-            QHBoxLayout* top=Layout_Top(snsr);
+            QHBoxLayout* top=Layout_Top();
 
             QLabel* zone=new QLabel("ZONA:");
             zone->setAlignment(Qt::AlignCenter | Qt::AlignTop);

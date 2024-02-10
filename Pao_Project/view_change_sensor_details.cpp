@@ -15,7 +15,7 @@ QFrame* View_Change_Sensor_Details::addSeparator(){
     return div;
 }
 
-View_Change_Sensor_Details::View_Change_Sensor_Details(Sensore * sensore, QWidget * p):snsr(sensore),QWidget(p){
+View_Change_Sensor_Details::View_Change_Sensor_Details(Sensore * sensore, QWidget * p):QWidget(p),snsr(sensore){
 
     this->setWindowIcon(QIcon(":/Immagini/Icon.jpg"));
     this->setWindowTitle("Modifiche_Dettagli_Sensore");

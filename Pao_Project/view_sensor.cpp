@@ -24,7 +24,7 @@ View_Chart_Sensor* Sensor_View::Right_Sensor(Sensore* s){
 }
 
 Sensor_View::Sensor_View(Sensore* sensore, QWidget* p,QFrame* d):
-    snsr(sensore),parent(p),div(d)
+    parent(p),div(d),snsr(sensore)
 {
     details=new View_Sensore_Details(snsr);
     modify_details=new View_Change_Sensor_Details(snsr);

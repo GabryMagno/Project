@@ -43,7 +43,7 @@ private:
 
 public:
     View_Choice_Details_New_Sensor(Sensore* =nullptr, QWidget* =nullptr);
-    QHBoxLayout* Layout_Top(Sensore*);
+    QHBoxLayout* Layout_Top();
 public slots:
     void Add_New();
     void No_Add();
