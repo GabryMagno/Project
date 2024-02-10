@@ -1,0 +1,81 @@
+[
+    {
+        "Image_Path": ":/Immagini/PM.png",
+        "Nome": "SNSR-INQM-207",
+        "PM_10": 0,
+        "PM_2,5": 0,
+        "Tipo": "Sensore_Inquinamento"
+    },
+    {
+        "Image_Path": ":/Immagini/Temperatura.png",
+        "Max_Temperatura": 60,
+        "Min_Temperatura": -30,
+        "Nome": "SNSR-TMPR-623",
+        "Temperatura": 25,
+        "Tipo": "Sensore_Temperatura"
+    },
+    {
+        "Image_Path": ":/Immagini/Profondita.png",
+        "Max_Profondità": 10000,
+        "Nome": "SNSR-PRFD-717",
+        "Profondità": 1000,
+        "Tipo": "Sensore_Profondità",
+        "Zona": "OCEANO"
+    },
+    {
+        "Image_Path": ":/Immagini/pH_Acqua.jpg",
+        "Max_pH": 8.899999618530273,
+        "Min_pH": 5,
+        "Nome": "SNSR-PH-157",
+        "Tipo": "Sensore_pH",
+        "Zona": "OCEANO",
+        "pH": 8
+    },
+    {
+        "Image_Path": ":/Immagini/PM.png",
+        "Nome": "SNSR-INQM-653",
+        "PM_10": 0,
+        "PM_2,5": 0,
+        "Tipo": "Sensore_Inquinamento"
+    },
+    {
+        "Image_Path": ":/Immagini/Temperatura.png",
+        "Max_Temperatura": 60,
+        "Min_Temperatura": -30,
+        "Nome": "SNSR-TMPR-528",
+        "Temperatura": 25,
+        "Tipo": "Sensore_Temperatura"
+    },
+    {
+        "Image_Path": ":/Immagini/Temperatura.png",
+        "Max_Temperatura": 60,
+        "Min_Temperatura": -30,
+        "Nome": "SNSR-TMPR-803",
+        "Temperatura": 25,
+        "Tipo": "Sensore_Temperatura"
+    },
+    {
+        "Image_Path": ":/Immagini/PM.png",
+        "Nome": "SNSR-INQM-776",
+        "PM_10": 0,
+        "PM_2,5": 0,
+        "Tipo": "Sensore_Inquinamento"
+    },
+    {
+        "Image_Path": ":/Immagini/pH_Acqua.jpg",
+        "Max_pH": 8.899999618530273,
+        "Min_pH": 5,
+        "Nome": "SNSR-PH-151",
+        "Tipo": "Sensore_pH",
+        "Zona": "OCEANO",
+        "pH": 8
+    },
+    {
+        "Image_Path": ":/Immagini/Profondita.png",
+        "Max_Profondità": 10000,
+        "Nome": "SNSR-PRFD-771",
+        "Profondità": 1000,
+        "Tipo": "Sensore_Profondità",
+        "Zona": "OCEANO"
+    }
+]

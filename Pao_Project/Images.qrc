@@ -1,0 +1,23 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Immagini/Accept.jpg</file>
+        <file>Immagini/Aggiungi.png</file>
+        <file>Immagini/Apri.jpg</file>
+        <file>Immagini/Cerca.png</file>
+        <file>Immagini/Choice.png</file>
+        <file>Immagini/Decline.png</file>
+        <file>Immagini/Elimina.jpg</file>
+        <file>Immagini/Esci.png</file>
+        <file>Immagini/Grafico.jpg</file>
+        <file>Immagini/Icon.jpg</file>
+        <file>Immagini/Modifica.jpg</file>
+        <file>Immagini/New_Simulation.png</file>
+        <file>Immagini/pH_Acqua.jpg</file>
+        <file>Immagini/PM.png</file>
+        <file>Immagini/Profondita.png</file>
+        <file>Immagini/Salva.jpg</file>
+        <file>Immagini/Save_as.jpg</file>
+        <file>Immagini/Temperatura.png</file>
+        <file>Immagini/Visita.jpg</file>
+    </qresource>
+</RCC>
