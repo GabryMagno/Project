@@ -211,12 +211,12 @@ void View_Change_Sensor_Details::Confirms(){
         if(fiume->isChecked())(static_cast<Sensore_Acquatico*>(snsr))->SetWaterArea("FIUME");
         if(max_profondità->text()!=""){
             QString max_prof=max_profondità->text();
-            unsigned int max=max_prof.split(" ")[0].toInt();
+            unsigned int max=max_prof.toInt();
             (static_cast<Sensore_Profondità*>(snsr))->Set_Profondità_Max(max);
         }
         if(profondità->text()!=""){
             QString prof=profondità->text();
-            unsigned int depth=prof.split(" ")[0].toInt();
+            unsigned int depth=prof.toInt();
             (static_cast<Sensore_Profondità*>(snsr))->Set_Profondità(depth);
         }
         emit Update();
@@ -224,12 +224,12 @@ void View_Change_Sensor_Details::Confirms(){
     if(dynamic_cast<Sensore_Inquinamento*>(snsr)){
         if(PM2_5->text()!="){"){
             QString pm2_5=PM2_5->text();
-            unsigned int max=pm2_5.split(" ")[0].toInt();
+            unsigned int max=pm2_5.toUInt();
             (static_cast<Sensore_Inquinamento*>(snsr))->Set_PM_2_5(max);
         }
         if(PM_10->text()!=""){
             QString pm_10=PM_10->text();
-            unsigned int depth=pm_10.split(" ")[0].toInt();
+            unsigned int depth=pm_10.toUInt();
             (static_cast<Sensore_Inquinamento*>(snsr))->Set_PM_10(depth);
         }
         emit Update();
@@ -237,17 +237,17 @@ void View_Change_Sensor_Details::Confirms(){
     if(dynamic_cast<Sensore_Temperatura*>(snsr)){
         if(min_temperatura->text()!=""){
             QString min_temp=min_temperatura->text();
-            int min=min_temp.split(" ")[0].toInt();
+            int min=min_temp.toInt();
             (static_cast<Sensore_Temperatura*>(snsr))->Set_Temperatura_Min(min);
         }
         if(max_temperatura->text()!=""){
             QString max_temp=max_temperatura->text();
-            int max=max_temp.split(" ")[0].toInt();
+            int max=max_temp.toInt();
             (static_cast<Sensore_Temperatura*>(snsr))->Set_Temperatura_Max(max);
         }
         if(temperatura->text()!=""){
             QString temp=temperatura->text();
-            int depth=temp.split(" ")[0].toInt();
+            int depth=temp.toInt();
             (static_cast<Sensore_Temperatura*>(snsr))->Set_Temperatura(depth);
         }
         emit Update();
@@ -259,18 +259,18 @@ void View_Change_Sensor_Details::Confirms(){
         if(fiume->isChecked())(static_cast<Sensore_Acquatico*>(snsr))->SetWaterArea("FIUME");
         if(min_pH->text()!=""){
             QString phmin=min_pH->text();
-            unsigned int p0=phmin.split(" ")[0].toInt();
+            float p0=phmin.toFloat();
             (static_cast<Sensore_pH*>(snsr))->Set_pH_Min(p0);
         }
         if(max_pH->text()!=""){
             QString phmax=max_pH->text();
-            unsigned int p1=phmax.split(" ")[0].toInt();
+            float p1=phmax.toFloat();
             (static_cast<Sensore_pH*>(snsr))->Set_pH_Max(p1);
         }
         if(pH->text()!=""){
             QString ph=pH->text();
-            unsigned int p2=ph.split(" ")[0].toInt();
-            (static_cast<Sensore_pH*>(snsr))->Set_pH_Min(p2);
+            float p2=ph.toFloat();
+            (static_cast<Sensore_pH*>(snsr))->Set_pH(p2);
         }
         emit Update();
     }

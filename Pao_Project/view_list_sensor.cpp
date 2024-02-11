@@ -15,6 +15,7 @@ void View_List_Sensor::Filter(unsigned int i){
 
     Box_List_Widget->addWidget(sensore);
 
+
     connect(sensore,SIGNAL(Delete(Sensore*)),this,SLOT(Delete_Sensor(Sensore*)));
     connect(sensore,SIGNAL(Changed()),this,SLOT(Modified()));
 
@@ -145,6 +146,7 @@ void View_List_Sensor::Add_Sensor_Widget(){
         add->show();
         i++;
     }
+    add->activateWindow();
 }
 
 void View_List_Sensor::Searched(){

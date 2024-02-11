@@ -23,7 +23,7 @@ std::string Sensore_Profondità::Get_Img_Path() const{return ":/Immagini/Profond
 
 Sensore_Profondità* Sensore_Profondità::clone() const{return new Sensore_Profondità(*this);}
 
-void Sensore_Profondità::Set_Profondità(int deep){(deep>profondità_max ? profondità=profondità_max : profondità=deep);}
+void Sensore_Profondità::Set_Profondità(int deep){((deep>profondità_max || deep<0)  ? profondità=profondità_max/2 : profondità=deep);}
 
 void Sensore_Profondità::Set_Profondità_Max(int depth_max){((depth_max<1200||depth_max>12000) ? profondità_max=10000 : profondità_max=depth_max);}
 

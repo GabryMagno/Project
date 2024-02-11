@@ -21,7 +21,7 @@ public:
     View(Model* =nullptr, QWidget* =nullptr);
 
     Model* model;
-    Json_File* file;//controllare
+    Json_File* file;
     View_Filters* filters;
     View_List_Sensor* widget_list;
 

@@ -22,13 +22,6 @@ void Model::Elimina_Sensore(Sensore* snsr){
     sensori.Erase(snsr);
 }
 
-void Model::Lista_Nomi(){
-    for(Lista_Sensori<Sensore*>::Const_Iterator cit=sensori.cbegin();cit!=sensori.cend();++cit){
-        std::cout<<(*cit)->Get_Nome()<<"->";
-    }
-    std::cout<<std::endl;
-}
-
 unsigned int Model::Get_Numero_Sensori() const{
     return sensori.Size();
 }

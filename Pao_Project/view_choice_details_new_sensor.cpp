@@ -143,10 +143,10 @@ View_Choice_Details_New_Sensor::View_Choice_Details_New_Sensor(Sensore* s, QWidg
             temp->setAlignment(Qt::AlignCenter | Qt::AlignTop);
 
             min_temperatura=new QLineEdit;
-            min_temperatura->setPlaceholderText("Inserire un numero N : -30°C<=N<=100°C");
+            min_temperatura->setPlaceholderText("Inserire un numero N : -30°C<=N<=60°C");
 
             max_temperatura=new QLineEdit;
-            max_temperatura->setPlaceholderText("Inserire un numero N : MIN_TEMPERATURA<N<=100°C");
+            max_temperatura->setPlaceholderText("Inserire un numero N : MIN_TEMPERATURA<N<=60°C");
 
             temperatura=new QLineEdit;
             temperatura->setPlaceholderText("Inserire un numero N : MIN_TEMPERATURA<N<=MAX_TEMPERATURA");
@@ -256,8 +256,8 @@ void View_Choice_Details_New_Sensor::Add_New(){
         }
         if(dynamic_cast<Sensore_Inquinamento*>(snsr)){
 
-            static_cast<Sensore_Inquinamento*>(snsr)->Set_PM_2_5(QString(PM2_5->text()).toInt());
-            static_cast<Sensore_Inquinamento*>(snsr)->Set_PM_10(QString(PM_10->text()).toInt());
+            static_cast<Sensore_Inquinamento*>(snsr)->Set_PM_2_5(QString(PM2_5->text()).toUInt());
+            static_cast<Sensore_Inquinamento*>(snsr)->Set_PM_10(QString(PM_10->text()).toUInt());
 
         }
         if(dynamic_cast<Sensore_Temperatura*>(snsr)){
@@ -274,9 +274,9 @@ void View_Choice_Details_New_Sensor::Add_New(){
             if(lago->isChecked())(static_cast<Sensore_Acquatico*>(snsr))->SetWaterArea("LAGO");
             if(fiume->isChecked())(static_cast<Sensore_Acquatico*>(snsr))->SetWaterArea("FIUME");
 
-            static_cast<Sensore_pH*>(snsr)->Set_pH_Min(QString(min_pH->text()).toInt());
-            static_cast<Sensore_pH*>(snsr)->Set_pH_Max(QString(max_pH->text()).toInt());
-            static_cast<Sensore_pH*>(snsr)->Set_pH(QString(pH->text()).toInt());
+            static_cast<Sensore_pH*>(snsr)->Set_pH_Min(min_pH->text().toFloat());
+            static_cast<Sensore_pH*>(snsr)->Set_pH_Max(max_pH->text().toFloat());
+            static_cast<Sensore_pH*>(snsr)->Set_pH(pH->text().toFloat());
 
         }
         emit Add(snsr);

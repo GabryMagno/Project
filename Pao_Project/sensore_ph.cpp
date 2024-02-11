@@ -33,7 +33,7 @@ void Sensore_pH::Set_pH_Min(float ph0){((ph0<5.0 || ph0>=ph_max) ? ph_min=5.0 : 
 
 void Sensore_pH::Set_pH_Max(float ph0){((ph0<=ph_min || ph0>8.9) ? ph_max=8.9 : ph_max=ph0);}
 
-void Sensore_pH::Set_pH(float p){((p<ph_min || p>ph_max) ? ph=8.0 : ph=p);}
+void Sensore_pH::Set_pH(float p){((p<ph_min || p>ph_max) ? ph=(ph_max+ph_min)/2 : ph=p);}
 
 void Sensore_pH::Accept(Sensor_Visitor* v) const{v->Visit(*this);}
 

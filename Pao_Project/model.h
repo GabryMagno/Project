@@ -13,7 +13,6 @@ public:
     void Aggiungi_Sensore(Sensore*);
     void Elimina_Sensore(Sensore*);
     Lista_Sensori<Sensore*> Get_ListaSensori();
-    void Lista_Nomi();
     unsigned int Get_Numero_Sensori() const;
 };
 

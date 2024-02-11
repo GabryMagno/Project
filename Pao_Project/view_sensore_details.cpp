@@ -144,15 +144,15 @@ View_Sensore_Details::View_Sensore_Details(Sensore* snsr0,QWidget* p):QWidget(p)
         QLabel* zone=new QLabel("ZONA : "+zona);
         zone->setAlignment(Qt::AlignCenter | Qt::AlignTop);
 
-        QString val_min0=QString::number((static_cast<Sensore_pH*>(snsr))->Get_pH_Min());
+        QString val_min0=QString::number((static_cast<Sensore_pH*>(snsr))->Get_pH_Min(),'f',1);
         QLabel* val_min=new QLabel("MIN  PH  REGISTABILE: "+val_min0);
         val_min->setAlignment(Qt::AlignCenter | Qt::AlignTop);
 
-        QString val_max0=QString::number((static_cast<Sensore_pH*>(snsr))->Get_pH_Max());
+        QString val_max0=QString::number((static_cast<Sensore_pH*>(snsr))->Get_pH_Max(),'f',1);
         QLabel* val_max=new QLabel("MAX  PH  REGISTABILE: "+val_max0);
         val_max->setAlignment(Qt::AlignCenter | Qt::AlignTop);
 
-        QString val0=QString::number((static_cast<Sensore_pH*>(snsr))->Get_pH());
+        QString val0=QString::number((static_cast<Sensore_pH*>(snsr))->Get_pH(),'f',1);
         QLabel* val=new QLabel("PH  ATTUALMENTE  REGISTRATO: "+val0);
         val->setAlignment(Qt::AlignCenter | Qt::AlignTop);
 
