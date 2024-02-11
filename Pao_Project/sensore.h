@@ -1,7 +1,6 @@
 #ifndef SENSORE_H
 #define SENSORE_H
 #include<string>
-#include<QMainWindow>
 #include<ctime>
 #include<cstdlib>
 #include"sensor_visitor.h"
