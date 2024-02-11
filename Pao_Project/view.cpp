@@ -58,7 +58,7 @@ View::View(Model* l, QWidget*):model(l)
 }
 
 void View::Load(){
-    QString path="./../Sensori/Salvataggi/";
+    QString path="./../Project/Pao_Project/Salvataggi/";
     QString name=QFileDialog::getOpenFileName(this,tr("Load a JSON File"),path,"JSON files *.json");
     if(!name.isEmpty()){
         model=file->read(name);
@@ -79,7 +79,7 @@ void View::Aggiorna(){
 }
 
 void View::Salva(){
-    QString path="./../Sensori/Salvataggi/";
+    QString path="./../Project/Pao_Project/Salvataggi/";
     QString name=QFileDialog::getSaveFileName(this,tr("Save on JSON File"),path,tr("JSON (*.json)"));
     if(!name.isEmpty()){
         file->write(model,name);

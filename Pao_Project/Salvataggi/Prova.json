@@ -1,39 +1,122 @@
 [
     {
+        "Image_Path": ":/Immagini/Temperatura.png",
+        "Max_Temperatura": 30,
+        "Min_Temperatura": -30,
+        "Nome": "SNSR-TMPR-120",
+        "Temperatura": 3,
+        "Tipo": "Sensore_Temperatura"
+    },
+    {
+        "Image_Path": ":/Immagini/pH_Acqua.jpg",
+        "Max_pH": 0,
+        "Min_pH": 0,
+        "Nome": "SNSR-PH-780",
+        "Tipo": "Sensore_pH",
+        "Zona": "LAGO",
+        "pH": 8
+    },
+    {
+        "Image_Path": ":/Immagini/Profondita.png",
+        "Max_Profondità": 1500,
+        "Nome": "SNSR-PRFD-015",
+        "Profondità": 600,
+        "Tipo": "Sensore_Profondità",
+        "Zona": "FIUME"
+    },
+    {
+        "Image_Path": ":/Immagini/pH_Acqua.jpg",
+        "Max_pH": 7,
+        "Min_pH": 6,
+        "Nome": "SNSR-PH-655",
+        "Tipo": "Sensore_pH",
+        "Zona": "OCEANO",
+        "pH": 8
+    },
+    {
         "Image_Path": ":/Immagini/PM.png",
-        "Nome": "SNSR-INQM-207",
-        "PM_10": 0,
-        "PM_2,5": 0,
+        "Nome": "SNSR-INQM-325",
+        "PM_10": 34,
+        "PM_2,5": 12,
         "Tipo": "Sensore_Inquinamento"
     },
     {
         "Image_Path": ":/Immagini/Temperatura.png",
-        "Max_Temperatura": 60,
-        "Min_Temperatura": -30,
-        "Nome": "SNSR-TMPR-623",
-        "Temperatura": 25,
+        "Max_Temperatura": 56,
+        "Min_Temperatura": -22,
+        "Nome": "SNSR-TMPR-237",
+        "Temperatura": 27,
+        "Tipo": "Sensore_Temperatura"
+    },
+    {
+        "Image_Path": ":/Immagini/Temperatura.png",
+        "Max_Temperatura": 40,
+        "Min_Temperatura": 10,
+        "Nome": "SNSR-TMPR-428",
+        "Temperatura": 32,
         "Tipo": "Sensore_Temperatura"
     },
     {
         "Image_Path": ":/Immagini/Profondita.png",
-        "Max_Profondità": 10000,
-        "Nome": "SNSR-PRFD-717",
-        "Profondità": 1000,
+        "Max_Profondità": 3000,
+        "Nome": "SNSR-PRFD-214",
+        "Profondità": 500,
+        "Tipo": "Sensore_Profondità",
+        "Zona": "MARE"
+    },
+    {
+        "Image_Path": ":/Immagini/pH_Acqua.jpg",
+        "Max_pH": 0,
+        "Min_pH": 0,
+        "Nome": "SNSR-PH-158",
+        "Tipo": "Sensore_pH",
+        "Zona": "MARE",
+        "pH": 0
+    },
+    {
+        "Image_Path": ":/Immagini/pH_Acqua.jpg",
+        "Max_pH": 0,
+        "Min_pH": 0,
+        "Nome": "SNSR-PH-538",
+        "Tipo": "Sensore_pH",
+        "Zona": "FIUME",
+        "pH": 0
+    },
+    {
+        "Image_Path": ":/Immagini/PM.png",
+        "Nome": "SNSR-INQM-324",
+        "PM_10": 49,
+        "PM_2,5": 37,
+        "Tipo": "Sensore_Inquinamento"
+    },
+    {
+        "Image_Path": ":/Immagini/Temperatura.png",
+        "Max_Temperatura": 55,
+        "Min_Temperatura": -15,
+        "Nome": "SNSR-TMPR-776",
+        "Temperatura": 23,
+        "Tipo": "Sensore_Temperatura"
+    },
+    {
+        "Image_Path": ":/Immagini/Profondita.png",
+        "Max_Profondità": 8000,
+        "Nome": "SNSR-PRFD-316",
+        "Profondità": 4077,
         "Tipo": "Sensore_Profondità",
         "Zona": "OCEANO"
     },
     {
         "Image_Path": ":/Immagini/pH_Acqua.jpg",
-        "Max_pH": 8.899999618530273,
-        "Min_pH": 5,
-        "Nome": "SNSR-PH-157",
+        "Max_pH": 0,
+        "Min_pH": 0,
+        "Nome": "SNSR-PH-818",
         "Tipo": "Sensore_pH",
-        "Zona": "OCEANO",
-        "pH": 8
+        "Zona": "LAGO",
+        "pH": 0
     },
     {
         "Image_Path": ":/Immagini/PM.png",
-        "Nome": "SNSR-INQM-653",
+        "Nome": "SNSR-INQM-685",
         "PM_10": 0,
         "PM_2,5": 0,
         "Tipo": "Sensore_Inquinamento"
@@ -42,21 +125,45 @@
         "Image_Path": ":/Immagini/Temperatura.png",
         "Max_Temperatura": 60,
         "Min_Temperatura": -30,
-        "Nome": "SNSR-TMPR-528",
+        "Nome": "SNSR-TMPR-552",
         "Temperatura": 25,
         "Tipo": "Sensore_Temperatura"
+    },
+    {
+        "Image_Path": ":/Immagini/Profondita.png",
+        "Max_Profondità": 10000,
+        "Nome": "SNSR-PRFD-274",
+        "Profondità": 1000,
+        "Tipo": "Sensore_Profondità",
+        "Zona": "LAGO"
+    },
+    {
+        "Image_Path": ":/Immagini/pH_Acqua.jpg",
+        "Max_pH": 8.899999618530273,
+        "Min_pH": 5,
+        "Nome": "SNSR-PH-720",
+        "Tipo": "Sensore_pH",
+        "Zona": "FIUME",
+        "pH": 8
+    },
+    {
+        "Image_Path": ":/Immagini/PM.png",
+        "Nome": "SNSR-INQM-666",
+        "PM_10": 0,
+        "PM_2,5": 0,
+        "Tipo": "Sensore_Inquinamento"
     },
     {
         "Image_Path": ":/Immagini/Temperatura.png",
         "Max_Temperatura": 60,
         "Min_Temperatura": -30,
-        "Nome": "SNSR-TMPR-803",
+        "Nome": "SNSR-TMPR-568",
         "Temperatura": 25,
         "Tipo": "Sensore_Temperatura"
     },
     {
         "Image_Path": ":/Immagini/PM.png",
-        "Nome": "SNSR-INQM-776",
+        "Nome": "SNSR-INQM-583",
         "PM_10": 0,
         "PM_2,5": 0,
         "Tipo": "Sensore_Inquinamento"
@@ -65,7 +172,7 @@
         "Image_Path": ":/Immagini/pH_Acqua.jpg",
         "Max_pH": 8.899999618530273,
         "Min_pH": 5,
-        "Nome": "SNSR-PH-151",
+        "Nome": "SNSR-PH-008",
         "Tipo": "Sensore_pH",
         "Zona": "OCEANO",
         "pH": 8
@@ -73,7 +180,7 @@
     {
         "Image_Path": ":/Immagini/Profondita.png",
         "Max_Profondità": 10000,
-        "Nome": "SNSR-PRFD-771",
+        "Nome": "SNSR-PRFD-465",
         "Profondità": 1000,
         "Tipo": "Sensore_Profondità",
         "Zona": "OCEANO"
