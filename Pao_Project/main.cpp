@@ -38,6 +38,5 @@ int main(int argc, char *argv[]){
     int screenHeight=screen->geometry().height();
     v->setGeometry((screenWidth/2)-(width/2), (screenHeight/2)-(height/2), width, height);
     v->show();
-    //Sensore* sns=(*snsr1)[4];//IMPORTANTE
     return a.exec();
 }
