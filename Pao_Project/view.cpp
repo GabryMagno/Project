@@ -58,20 +58,45 @@ View::View(Model* l, QWidget*):model(l)
 }
 
 void View::Load(){
-    QString path="./../Project/Pao_Project/Salvataggi/";
-    QString name=QFileDialog::getOpenFileName(this,tr("Load a JSON File"),path,"JSON files *.json");
-    if(!name.isEmpty()){
-        model=file->read(name);
+    if(not_saved==true){
+        QMessageBox::StandardButton scegliere;
+        scegliere=QMessageBox::question(this,"Modifiche_non_salvate",
+                                          "Sicuro di voler caricare un nuovo file senza salvare le modifiche apportate?",
+                                          QMessageBox::Yes | QMessageBox::No);
+        if(scegliere==QMessageBox::Yes){
+            QString path="./../Project/Pao_Project/Salvataggi/";
+            QString name=QFileDialog::getOpenFileName(this,tr("Load a JSON File"),path,"JSON files *.json");
+            if(!name.isEmpty()){
+                model=file->read(name);
+            }
+            View_List_Sensor* new_widget_list=widget_list;
+            widget_list=new View_List_Sensor(model,this);
+            widget_list->Ricerca("Sensore");
+            main->addWidget(widget_list);
+            this->setCentralWidget(main_Widget);
+            connect(filters,SIGNAL(Researching(std::string)),widget_list,SLOT(Update_Filetrs(std::string)));
+            connect(Aggiungi,SIGNAL(triggered()),widget_list,SLOT(Add_Sensor_Widget()));
+            connect(widget_list,SIGNAL(Change()),this,SLOT(Aggiorna()));
+            delete new_widget_list;
+            not_saved=false;
+        }
+    }else{
+        QString path="./../Project/Pao_Project/Salvataggi/";
+        QString name=QFileDialog::getOpenFileName(this,tr("Load a JSON File"),path,"JSON files *.json");
+        if(!name.isEmpty()){
+            model=file->read(name);
+        }
+        View_List_Sensor* new_widget_list=widget_list;
+        widget_list=new View_List_Sensor(model,this);
+        widget_list->Ricerca("Sensore");
+        main->addWidget(widget_list);
+        this->setCentralWidget(main_Widget);
+        connect(filters,SIGNAL(Researching(std::string)),widget_list,SLOT(Update_Filetrs(std::string)));
+        connect(Aggiungi,SIGNAL(triggered()),widget_list,SLOT(Add_Sensor_Widget()));
+        connect(widget_list,SIGNAL(Change()),this,SLOT(Aggiorna()));
+        delete new_widget_list;
+        not_saved=false;
     }
-    View_List_Sensor* new_widget_list=widget_list;
-    widget_list=new View_List_Sensor(model,this);
-    widget_list->Ricerca("Sensore");
-    main->addWidget(widget_list);
-    this->setCentralWidget(main_Widget);
-    connect(filters,SIGNAL(Researching(std::string)),widget_list,SLOT(Update_Filetrs(std::string)));
-    connect(Aggiungi,SIGNAL(triggered()),widget_list,SLOT(Add_Sensor_Widget()));
-    connect(widget_list,SIGNAL(Change()),this,SLOT(Aggiorna()));
-    delete new_widget_list;
 }
 
 void View::Aggiorna(){
