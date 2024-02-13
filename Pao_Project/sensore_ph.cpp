@@ -61,7 +61,7 @@ std::string Sensore_pH::Info() const{
     return "Dati non disponibili";
 }
 
-Sensore* Sensore_pH::FromJson(const QJsonObject& obj){
+Sensore_pH* Sensore_pH::FromJson(const QJsonObject& obj){
     return new Sensore_pH(
         obj.value("Nome").toString().toStdString(),
         obj.value("Zona").toString().toStdString(),

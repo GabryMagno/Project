@@ -22,7 +22,7 @@ public:
     void Set_Temperatura_Min(int);
     void Accept(Sensor_Visitor* v) const override;
     std::string Info() const override;
-    Sensore* FromJson(const QJsonObject&) override;
+    Sensore_Temperatura* FromJson(const QJsonObject&) override;
 };
 
 #endif // SENSORE_TEMPERATURA_

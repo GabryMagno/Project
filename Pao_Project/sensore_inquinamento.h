@@ -17,7 +17,7 @@ public:
     void Set_PM_10(uint);
     void Accept(Sensor_Visitor* v) const override;
     std::string Info() const override;
-    Sensore* FromJson(const QJsonObject&) override;
+    Sensore_Inquinamento* FromJson(const QJsonObject&) override;
 };
 
 #endif // SENSORE_INQUINAMENTO_H

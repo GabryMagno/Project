@@ -21,7 +21,7 @@ public:
     void Set_pH(float);
     void Accept(Sensor_Visitor* v)const override;
     std::string Info() const override;
-    Sensore* FromJson(const QJsonObject&) override;
+    Sensore_pH* FromJson(const QJsonObject&) override;
 };
 
 #endif // SENSORE_PH_H

@@ -45,7 +45,7 @@ std::string Sensore_Temperatura::Info() const{
     return "Temperatura ambiente";
 }
 
-Sensore* Sensore_Temperatura::FromJson(const QJsonObject& obj){
+Sensore_Temperatura* Sensore_Temperatura::FromJson(const QJsonObject& obj){
     return new Sensore_Temperatura(
         obj.value("Nome").toString().toStdString(),
         obj.value("Min_Temperatura").toInt(),

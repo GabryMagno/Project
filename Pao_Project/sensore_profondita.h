@@ -18,7 +18,7 @@ public:
     void Set_Profondità_Max(int);
     void Accept(Sensor_Visitor* v) const override;
     std::string Info() const override;
-    Sensore* FromJson(const QJsonObject&) override;
+    Sensore_Profondità* FromJson(const QJsonObject&) override;
 };
 
 #endif // SENSORE_PROFONDITA_H

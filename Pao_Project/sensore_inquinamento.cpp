@@ -32,7 +32,7 @@ std::string Sensore_Inquinamento::Info() const{
     else return "I livelli di polveri sottili sono nella norma";
 }
 
-Sensore* Sensore_Inquinamento::FromJson(const QJsonObject& obj){
+Sensore_Inquinamento* Sensore_Inquinamento::FromJson(const QJsonObject& obj){
     return new Sensore_Inquinamento(
         obj.value("Nome").toString().toStdString(),
         obj.value("PM_2,5").toInt(),

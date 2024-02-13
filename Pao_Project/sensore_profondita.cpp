@@ -36,7 +36,7 @@ std::string Sensore_Profondità::Info() const{
     return "Siamo ad una profondità di "+s+" metri dalla superficie.";
 }
 
-Sensore* Sensore_Profondità::FromJson(const QJsonObject& obj){
+Sensore_Profondità* Sensore_Profondità::FromJson(const QJsonObject& obj){
     return new Sensore_Profondità(
         obj.value("Nome").toString().toStdString(),
         obj.value("Zona").toString().toStdString(),
